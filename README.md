@@ -9,6 +9,3 @@
 智扫通机器人智能客服是一个面向扫地机器人使用用户的问答聊天应用。
 <br>整体由前端（使用streamlit搭建）和后端（利用Langchain构建的Agent）组成
 
-# 目录结构
-Agent-project-demo/
-
