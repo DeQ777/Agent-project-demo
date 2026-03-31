@@ -1,0 +1,176 @@
+2026-03-27 15:46:35,149 - agent - INFO - logger_handler.py:49 - 信息日志
+2026-03-27 15:46:35,150 - agent - ERROR - logger_handler.py:50 - 错误日志
+2026-03-27 15:46:35,150 - agent - WARNING - logger_handler.py:51 - 警告日志
+2026-03-27 15:46:35,150 - agent - DEBUG - logger_handler.py:52 - 调试日志
+2026-03-27 15:47:15,921 - agent - INFO - logger_handler.py:49 - 信息日志
+2026-03-27 15:47:15,921 - agent - ERROR - logger_handler.py:50 - 错误日志
+2026-03-27 15:47:15,921 - agent - WARNING - logger_handler.py:51 - 警告日志
+2026-03-27 15:47:15,922 - agent - DEBUG - logger_handler.py:52 - 调试日志
+2026-03-27 15:48:38,629 - agent - INFO - logger_handler.py:49 - 信息日志
+2026-03-27 15:48:38,629 - agent - ERROR - logger_handler.py:50 - 错误日志
+2026-03-27 15:48:38,629 - agent - WARNING - logger_handler.py:51 - 警告日志
+2026-03-27 15:48:38,630 - agent - DEBUG - logger_handler.py:52 - 调试日志2026-03-27 15:49:55,972 - agent - INFO - logger_handler.py:49 - 信息日志
+2026-03-27 15:49:55,972 - agent - ERROR - logger_handler.py:50 - 错误日志
+2026-03-27 15:49:55,972 - agent - WARNING - logger_handler.py:51 - 警告日志
+2026-03-27 15:49:55,972 - agent - DEBUG - logger_handler.py:52 - 调试日志
+2026-03-27 15:52:26,750 - agent - INFO - logger_handler.py:49 - 信息日志
+2026-03-27 15:52:26,751 - agent - ERROR - logger_handler.py:50 - 错误日志
+2026-03-27 15:52:26,751 - agent - WARNING - logger_handler.py:51 - 警告日志
+2026-03-27 15:52:26,751 - agent - DEBUG - logger_handler.py:52 - 调试日志
+2026-03-27 19:14:55,391 - agent - INFO - logger_handler.py:49 - 信息日志
+2026-03-27 19:14:55,391 - agent - ERROR - logger_handler.py:50 - 错误日志
+2026-03-27 19:14:55,391 - agent - WARNING - logger_handler.py:51 - 警告日志
+2026-03-27 19:14:55,391 - agent - DEBUG - logger_handler.py:52 - 调试日志
+2026-03-27 19:15:02,435 - agent - INFO - logger_handler.py:49 - 信息日志
+2026-03-27 19:15:02,435 - agent - ERROR - logger_handler.py:50 - 错误日志
+2026-03-27 19:15:02,435 - agent - WARNING - logger_handler.py:51 - 警告日志
+2026-03-27 19:15:02,435 - agent - DEBUG - logger_handler.py:52 - 调试日志
+2026-03-27 19:30:18,908 - agent - ERROR - file_handler.py:30 - [listdir_with_allowed_type]data不是文件夹
+2026-03-27 19:30:18,909 - agent - ERROR - file_handler.py:9 - [md5计算]文件txt不存在
+2026-03-27 19:30:18,910 - agent - ERROR - vector_store.py:77 - [加载知识库]txt加载失败，Error loading txt
+Traceback (most recent call last):
+  File "D:\miniconda3\envs\langchain\lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\rag\vector_store.py", line 64, in load_document
+    documents = get_file_documents(path)
+  File "d:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\rag\vector_store.py", line 50, in get_file_documents
+    return txt_loader(read_path)
+  File "D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\utils\file_handler.py", line 41, in txt_loader
+    return TextLoader(file_path=filepath).load()
+  File "D:\miniconda3\envs\langchain\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\miniconda3\envs\langchain\lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading txt
+2026-03-27 19:30:18,911 - agent - ERROR - file_handler.py:9 - [md5计算]文件pdf不存在
+2026-03-27 19:30:18,912 - agent - ERROR - vector_store.py:77 - [加载知识库]pdf加载失败，File path pdf is not a valid file or url
+Traceback (most recent call last):
+  File "d:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\rag\vector_store.py", line 64, in load_document
+    documents = get_file_documents(path)
+  File "d:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\rag\vector_store.py", line 52, in get_file_documents
+    return pdf_loader(read_path)
+  File "D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\utils\file_handler.py", line 38, in pdf_loader
+    return PyPDFLoader(file_path=filepath, password=password).load()
+  File "D:\miniconda3\envs\langchain\lib\site-packages\langchain_community\document_loaders\pdf.py", line 281, in __init__
+    super().__init__(file_path, headers=headers)
+  File "D:\miniconda3\envs\langchain\lib\site-packages\langchain_community\document_loaders\pdf.py", line 140, in __init__
+    raise ValueError("File path %s is not a valid file or url" % self.file_path)
+ValueError: File path pdf is not a valid file or url
+2026-03-27 19:31:38,878 - agent - INFO - vector_store.py:74 - [加载知识库]D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\扫地机器人100问.pdf内容加载成功
+2026-03-27 19:31:38,879 - agent - ERROR - vector_store.py:77 - [加载知识库]D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\扫地机器人100问2.txt加载失败，Error loading D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\扫地机器人100问2.txt
+Traceback (most recent call last):
+  File "D:\miniconda3\envs\langchain\lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\rag\vector_store.py", line 64, in load_document
+    documents = get_file_documents(path)
+  File "d:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\rag\vector_store.py", line 50, in get_file_documents
+    return txt_loader(read_path)
+  File "D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\utils\file_handler.py", line 41, in txt_loader
+    return TextLoader(file_path=filepath).load()
+  File "D:\miniconda3\envs\langchain\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\miniconda3\envs\langchain\lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\扫地机器人100问2.txt
+2026-03-27 19:31:38,882 - agent - ERROR - vector_store.py:77 - [加载知识库]D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\扫拖一体机器人100问.txt加载失败，Error loading D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\扫拖一体机器人100问.txt
+Traceback (most recent call last):
+  File "D:\miniconda3\envs\langchain\lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\rag\vector_store.py", line 64, in load_document
+    documents = get_file_documents(path)
+  File "d:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\rag\vector_store.py", line 50, in get_file_documents
+    return txt_loader(read_path)
+  File "D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\utils\file_handler.py", line 41, in txt_loader
+    return TextLoader(file_path=filepath).load()
+  File "D:\miniconda3\envs\langchain\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\miniconda3\envs\langchain\lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\扫拖一体机器人100问.txt
+2026-03-27 19:31:38,884 - agent - ERROR - vector_store.py:77 - [加载知识库]D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\故障排除.txt加载失败，Error loading D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\故障排除.txt
+Traceback (most recent call last):
+  File "D:\miniconda3\envs\langchain\lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\rag\vector_store.py", line 64, in load_document
+    documents = get_file_documents(path)
+  File "d:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\rag\vector_store.py", line 50, in get_file_documents
+    return txt_loader(read_path)
+  File "D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\utils\file_handler.py", line 41, in txt_loader
+    return TextLoader(file_path=filepath).load()
+  File "D:\miniconda3\envs\langchain\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\miniconda3\envs\langchain\lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\故障排除.txt
+2026-03-27 19:31:38,886 - agent - ERROR - vector_store.py:77 - [加载知识库]D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\维护保养.txt加载失败，Error loading D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\维护保养.txt
+Traceback (most recent call last):
+  File "D:\miniconda3\envs\langchain\lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\rag\vector_store.py", line 64, in load_document
+    documents = get_file_documents(path)
+  File "d:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\rag\vector_store.py", line 50, in get_file_documents
+    return txt_loader(read_path)
+  File "D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\utils\file_handler.py", line 41, in txt_loader
+    return TextLoader(file_path=filepath).load()
+  File "D:\miniconda3\envs\langchain\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\miniconda3\envs\langchain\lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\维护保养.txt
+2026-03-27 19:31:38,888 - agent - ERROR - vector_store.py:77 - [加载知识库]D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\选购指南.txt加载失败，Error loading D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\选购指南.txt
+Traceback (most recent call last):
+  File "D:\miniconda3\envs\langchain\lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\rag\vector_store.py", line 64, in load_document
+    documents = get_file_documents(path)
+  File "d:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\rag\vector_store.py", line 50, in get_file_documents
+    return txt_loader(read_path)
+  File "D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\utils\file_handler.py", line 41, in txt_loader
+    return TextLoader(file_path=filepath).load()
+  File "D:\miniconda3\envs\langchain\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\miniconda3\envs\langchain\lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\选购指南.txt
+2026-03-27 19:33:00,818 - agent - INFO - vector_store.py:61 - [加载知识库]D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\扫地机器人100问.pdf已存在知识库内，跳过
+2026-03-27 19:33:04,178 - agent - INFO - vector_store.py:74 - [加载知识库]D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\扫地机器人100问2.txt内容加载成功
+2026-03-27 19:33:09,786 - agent - INFO - vector_store.py:74 - [加载知识库]D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\扫拖一体机器人100问.txt内容加载成功
+2026-03-27 19:33:20,677 - agent - INFO - vector_store.py:74 - [加载知识库]D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\故障排除.txt内容加载成功
+2026-03-27 19:33:25,592 - agent - INFO - vector_store.py:74 - [加载知识库]D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\维护保养.txt内容加载成功
+2026-03-27 19:33:31,895 - agent - INFO - vector_store.py:74 - [加载知识库]D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\选购指南.txt内容加载成功
+2026-03-27 19:34:07,509 - agent - INFO - vector_store.py:61 - [加载知识库]D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\扫地机器人100问.pdf已存在知识库内，跳过
+2026-03-27 19:34:07,510 - agent - INFO - vector_store.py:61 - [加载知识库]D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\扫地机器人100问2.txt已存在知识库内，跳过
+2026-03-27 19:34:07,511 - agent - INFO - vector_store.py:61 - [加载知识库]D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\扫拖一体机器人100问.txt已存在知识库内，跳过
+2026-03-27 19:34:07,511 - agent - INFO - vector_store.py:61 - [加载知识库]D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\故障排除.txt已存在知识库内，跳过
+2026-03-27 19:34:07,512 - agent - INFO - vector_store.py:61 - [加载知识库]D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\维护保养.txt已存在知识库内，跳过
+2026-03-27 19:34:07,513 - agent - INFO - vector_store.py:61 - [加载知识库]D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目\data\选购指南.txt已存在知识库内，跳过
