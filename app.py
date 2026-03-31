@@ -1,6 +1,5 @@
 """
-D:\###App for work\Python project\VScode Version\Langchain\06-Agent项目
-streamlit run app.py
+想要在网页中执行，先：在终端中切换当前所在环境 --> 将文件目录转换到当前文件所在的根目录 --> 输入指令streamlit run app.py回车即可
 """
 
 import streamlit as st
